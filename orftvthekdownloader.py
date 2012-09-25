@@ -10,7 +10,8 @@ import urllib2
 import subprocess
 import sys
 
-data = urllib2.urlopen(sys.argv[1]).read()
+tvthek_url = sys.argv[1]
+data = urllib2.urlopen(tvthek_url).read()
 
 for l in data.split("\n"):
 	if l.find("URL") > -1 and l.find(".asx") > -1:
